@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 require 'impromptu'
 
+puts Schedule.new(ARGV.first).plan
+
