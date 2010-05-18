@@ -14,4 +14,9 @@ class ScheduleTest < Test::Unit::TestCase
     assert_equal date, @schedule1.date
   end
 
+  def test_plan_with_no_date_is_no_plan
+    @schedule1.date = nil
+    assert_equal 'No plan', @schedule1.plan
+  end
+
 end
