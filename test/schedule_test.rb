@@ -24,4 +24,9 @@ class ScheduleTest < Test::Unit::TestCase
     assert_equal 'Hack', @schedule1.plan
   end
 
+  def test_plan_with_weekend_date_is_fish
+    @schedule1.date = Time.parse('Sat Nov 31 14:33:20 GMT 2001')
+    assert_equal 'Fish', @schedule1.plan
+  end
+
 end
