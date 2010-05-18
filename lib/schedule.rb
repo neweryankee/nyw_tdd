@@ -1,3 +1,3 @@
-class Calendar
+class Schedule
 
 end
