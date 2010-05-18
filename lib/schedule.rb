@@ -3,14 +3,11 @@ class Schedule
   attr_accessor :date
 
   def plan
-    if self.date.is_a? Time
-      if self.date.wday == 0 or self.date.wday == 6
-        'Fish'
-      else
-        'Hack'
-      end
+    return 'No plan' unless self.date.is_a? Time
+    if (1..5).include? self.date.wday
+      'Hack'
     else
-      'No plan'
+      'Fish'
     end
   end
 
