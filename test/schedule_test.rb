@@ -29,4 +29,11 @@ class ScheduleTest < Test::Unit::TestCase
     assert_equal 'Fish', @schedule1.plan
   end
 
+  def test_new_schedule_with_string_parses_date
+    date_string = 'Sat Nov 31 14:33:20 GMT 2001'
+    @schedule2  = Schedule.new(date_string)
+    date        = Time.parse(date_string)
+    assert_equal date, @schedule2.date
+  end
+
 end
