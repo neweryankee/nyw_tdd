@@ -1,1 +1,8 @@
 *.swp
+*.swo
+*.scratch.*
+.DS_Store
+.bundle
+vendor/cache
+Gemfile.lock
+
